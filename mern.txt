@@ -1,0 +1,26 @@
+#install express
+npm install express
+
+#create server.js file
+const express = require('express')
+const app = express()
+const port = 4000
+
+app.listen(port, () => {
+    console.log(`App run on port ${port}`);
+})
+
+# Run with
+node server.js
+
+# Run with nodemon
+nodemon server.js
+
+# for development use nodemoon package
+npm install -g nodemon
+
+# if nodemon not run go to power shell opan administrator
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# use .env
+npm install dotenv

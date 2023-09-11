@@ -1,0 +1,18 @@
+#Self Introduction:
+
+Hi, My name is Saad. I am From karachi, Pakistan. I have completed ACCP Prime From Aptect.
+I have 3 year of expirence in Web development using php lanaguage and 1 year of python data scraping.
+
+# Weekly work update
+I have reviewed the propwire scraper now have a good understanding of it. Now I am reviewing Probate scraper the other scrapers are pending.
+and I have started working on the development of scraper for forsyth website and estimate it will take me around 1-2 days to complete.
+
+No, No, it is easy I have not facing any kind of difficulty till now becuase 
+This website is not using any kind of capcha service and not blocking the coutinus request.
+when i stuck somewhere i will take help form siddiq
+
+Okay,but my payonner account accociate with my old email that is saad.intelligent123@gmail.com
+
+
+# Any question
+Right Now, I don't have any questions, but I will definitely reach out to you if anything comes up.

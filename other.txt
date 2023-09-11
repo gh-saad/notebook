@@ -1,0 +1,33 @@
+############################
+	JQuery Ajax
+############################
+$.ajax({
+    url: '',
+    type: "post",
+    data: {weight: weight,user_id: 4},
+    success: function (res) {
+        res = JSON.parse(res);
+        $('input[name=package_price]').val(res);
+        // You will get response from your PHP page (what you echo or print)
+    },
+        error: function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+    }
+});
+
+############################
+	Fetch Api
+############################
+(async () => {
+  const rawResponse = await fetch('https://httpbin.org/post', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({a: 1, b: 'Textual content'})
+  });
+  const content = await rawResponse.json();
+
+  console.log(content);
+})();

@@ -1,0 +1,12 @@
+# File upload laravel
+if ($request->hasFile('image')) {
+    # code...
+    $file = $request->file('image');
+    $extension = $file->getClientOriginalExtension();
+    $filename = time() . '.' . $extension;
+    $file->move('backend/uploads/brochur/', $filename);
+    $brochur->image = $filename;
+}
+
+# insert
+Model::create($array)

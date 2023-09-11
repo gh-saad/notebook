@@ -1,0 +1,81 @@
+# Questions before stating
+1.What make you satandout?
+2.What is your U.S.P?
+3.Who is your Audience?
+4.Who are your compatetors?
+5.What problem do your target audiences have?
+6.How can you solve them?
+7.Why exactly do you want to be online?
+
+# How People know you exist.
+    Find keywords relate to bussiness.
+    Register on loacl directories
+    Create Website
+    Create Social Media Profile
+
+# How to Convert Visitor to Customer
+    Provide a clear value proposition: unique value your business offers to customers.
+    Optimize your website
+    Use compelling calls to action: Buy Now | Learn More | Sign Up
+    Offer incentives:
+    Use social proof: customer reviews | testimonials
+    Simplify the checkout process: providing multiple payment options.
+    Follow up with leads:
+
+# Finding Customers
+    Seo - unpaid
+    Sem - paid
+
+# How to create Good Plan for digital marketing?
+    Set target: traffic | leads | sales
+    Set audience: demographics| interests | behaviors.
+    Set channels: social media | email marketing | SEO | SEM | content marketing,
+    Develop a content strategy: blog posts| videos | social media posts
+    Allocate your budget:
+    Develop a timeline:
+    Measure KPIS: 
+
+key performance indicators (KPIS)
+    Traffic: the number of visitors to a website or landing page.
+    Conversion rate: the percentage of visitors who take a desired action, such as making a purchase, filling out a form, or subscribing to a newsletter.
+    Cost per acquisition (CPA): the amount of money spent to acquire a customer or convert a lead.
+    Click-through rate (CTR): the percentage of people who click on a specific link or call-to-action.
+    Engagement rate: the percentage of people who interact with a piece of content, such as likes, comments, or shares on social media.
+    Return on investment (ROI): the revenue generated from a campaign divided by the cost of the campaign, expressed as a percentage.
+#KPIS Range
+    Traffic: 500-10K small; 10k-50k mid-sized; and 50k-500k+ large.
+    CR: 1-5% e-commerce; 5-10% lead generation; and 20%+ landing pages.
+    CPA: $50-$150 small: 200%-500% mid-sized; and 500%+ large.
+    ROI: 100%-200% small;200%-500% mid-sized; and 500%+ large.
+    CTR: 1-2% display ads; 2-5% search ads; and 10-20%+ email.
+    PPC: $0.50-$2 display ads; $1-$3 search ads; and $0.25-$1 social media ads.
+    Social media engagement: 1-3% for Facebook; 3-6% for Instagram; and 0.5-1% for Twitter.
+    Email open rate: 15-25% for promotional emails; and 25-35% for transactional emails.
+    Bounce rate: 26-40% for blogs; 41-55% for e-commerce websites; and 56%+ for landing pages.
+    Customer lifetime value (CLV): $1,000-$5,000 small; $5,000-$25,000 mid-sized ; and $25,000+ large.
+
+Q.What are your business goals and objectives?
+A.We want to create our revenue to 100$ per month by the end of 2023.
+Q.Who is your target audience?
+A.Bargain hunters, Online shoppers, Tech-savvy consumers, Brand loyalists,Savvy spenders
+Q.What channels should I use?
+A.Coupon and deal sites,Social media marketing, Influencer marketing
+Q.What is my budget?
+A.20$ per month
+Q.How will I measure success?
+A. Traffic: 500 unique visitors
+   CR: 1%
+   Sale: 5 click
+   ROI: 100-70/100 * 100 = 42.86%
+Q.Who will manage my digital marketing efforts?
+   By my self
+
+traffic: 10k-100k+
+CR: 5-10%
+CPA: $0.50-$2
+ROI: 200%-500%
+Bounce rate: 40-60%.
+Sale: 500-1000 click
+Cost: 250-20k
+Revenue: 5k-10k
+Profit: 500-10k

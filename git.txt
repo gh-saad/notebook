@@ -1,0 +1,12 @@
+# clone a private repository to cPanel?
+1.Create a password-less ssh-key from cPanel > Terminal by entering the following command
+  cd ~/.ssh/
+  ssh-keygen -t rsa -b 4096 -C "username@example"
+2.Now display the generated public-key using the command
+  cat ~/.ssh/id_rsa.pub
+3.Copy and paste the displayed public-key into the 
+    bitbucket.org > Personal Settings > Security > SSH Keys
+4.Open Cpanel > Terminal move to location
+	cd folder_name
+5.Clone Git repo
+	git clone git@bitbucket.org:username/project.git
