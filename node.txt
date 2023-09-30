@@ -1,2 +1,5 @@
 # update note
 node --version
+
+#NPM node package manager
+npm install

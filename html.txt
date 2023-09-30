@@ -1,0 +1,7 @@
+# Responsive Image
+<img src="{{ asset('assets/images/banners/bg-banner-sm.jpg') }}"
+                srcset="{{ asset('assets/images/banners/bg-banner-sm.jpg') }} 768w,{{ asset('assets/images/banners/bg-banner-md.jpg') }} 1920w"
+                sizes="(max-width: 480px) 100vw,(max-width: 1200px) 80vw,100vw"
+                alt="Empire Development theme black and gold marble background"
+                title="Empire Development theme black and gold marble background" 
+                class="back-img">

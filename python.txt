@@ -1,0 +1,36 @@
+### Create Python Library
+pip install wheel
+pip install setuptools
+pip install twine
+
+Create an empty file called setup.py. 
+Create an empty file called README.md. 
+Create a folder called mypythonlib
+
+Create an empty file inside mypythonlib that is called __init__.py.
+
+Also, in the same folder, create a file called myfunctions.py.
+
+Create content for your library
+
+Write in setup.py
+```
+from setuptools import find_packages, setup
+
+setup(
+    name='mypythonlib',
+    packages=find_packages(include=['mypythonlib']),
+    version='0.1.0',
+    description='My first Python library',
+    author='Me',
+    install_requires=[],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest==4.4.1'],
+    test_suite='tests',
+)
+```
+on cmd
+```
+python setup.py bdist_wheel
+```
+### Create Python Library End

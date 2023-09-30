@@ -1,3 +1,8 @@
+# Create env
+	cp .env.example .env
+#App key generate
+    php artisan key:generate
+
 # File upload laravel
 if ($request->hasFile('image')) {
     # code...
