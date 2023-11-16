@@ -40,3 +40,11 @@ cache-control: no-cache
 ect: 3g
 pragma: no-cache
 sec-ch-ua-full-version-list: "Mozilla/5.0 (Linux; Android 5.0; SM-G920A) AppleWebKit (KHTML, like Gecko) Chrome Mobile Safari (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)"
+
+
+#Scrapy playwright
+pip install scrapy-playwright
+
+playwright install
+
+[400,401,403,404,500,503,301,302,307,304,429]

@@ -1,0 +1,97 @@
+# Start code:
+    mount c c:/MP
+    c:
+
+# New/open File:
+    edit file_name.asam
+
+# Basic Structure:
+    dosseg
+    .model small (Use to take space i RAM) [small, medium, compate, large, huge, directive]
+    .stack 100h (Use when we need to use the occupide register we can push that value to the stack string revirce)
+    .data (Define variable after that)
+    .code ()
+    Main proc
+        ;coding here
+    mov ah,4ch
+    int 21h
+    Main endp
+    end Main
+
+# Registers
+    ## Types of Registers
+    1 General Purpose
+        a. Accmulator (Input - Output, Move value from reg to reg) 
+            al [size: 8 bit low, use: input] 
+            ah [size: 8 bit high, use: output]
+            ax [size: 16 bit, use: move value]
+            Eax [size: 32 bit]
+            Rax [size: 64 bit]
+        b. Base
+            bl [size: 8 bit low, use: ] 
+            bh [size: 8 bit high, use: ]
+            bx [size: 16 bit, use: ]
+            Ebx [size: 32 bit]
+            Rbx [size: 64 bit]
+        c. Counter
+            cl []
+            ch []
+            cx []
+        d. Data
+            dl []
+            dh []
+            dx [] ah(2 for char,9 for string)
+    2. Segment 
+        a. Code Segment
+        b. Data Segment
+        c. Stack Segment 
+        d. Extra Segment
+    3. Index Registers
+        a. Source Index
+        b. Distination Index
+    4. Special Registor
+        a.Intertion pointer
+        b.Stack Pointer
+    5. Flag Registor
+    6. Base Registor
+
+Send Interput to CPU   
+int 21h
+
+
+# Run
+save and exit file
+masm file_name.asm;
+link file_name.obj;
+file_name.exe
+
+# Print single char
+mov dx,'a'
+mov ah,2
+int 21h
+
+# Input and output char
+mov ah,1
+int 21h
+mov dl,al
+mov ah,2
+int 21h
+
+# add two number
+mov al,4
+mov dl,3
+add dl,al
+add dl,48
+mov ah,2
+int 21h
+
+# Sub 
+mov al,3
+mov dl,4
+sub dl,al
+add dl,48
+mov ah,2
+int 21h
+
+# when number add
+add reg,48
