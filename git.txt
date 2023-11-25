@@ -11,3 +11,7 @@
 	cd folder_name
 5.Clone Git repo
 	git clone git@bitbucket.org:username/project.git
+
+# Delopy key use on terminal
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/thedxboffplan

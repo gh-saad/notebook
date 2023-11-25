@@ -8,7 +8,7 @@
 # Basic Structure:
     dosseg (Format)
     .model small (Use to take space i RAM) [small, medium, compate, large, huge, directive]
-    .stack 100h (Use when we need to use the occupide register we can push that value to the stack string revirce)
+    .stack 100h (Use when we need to use the occupied register we can push that value to the stack string revirce)
     .data (Define variable after that)
 
     .code (after main coding start)
@@ -21,27 +21,27 @@
 
 # Registers
     ## Types of Registers
-    1 General Purpose
-        a. Accmulator (Input - Output, Move value from reg to reg) 
+    1 General Purpose (Input, Output and Move value from reg to reg)
+        a. Accmulator  
             al [size: 8 bit low, use: input]    1 byte [1,2,3,4,5,6,7,8] 
-            ah [size: 8 bit high, use: output]  1 byte [1,2,3,4,5,6,7,8]
+            ah [size: 8 bit high, use: output]  1 byte [9,10,11,12,13,14,15,16] ; ah(2 for char,9 for string)
             ax [size: 16 bit, use: move value]  2 byte [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
             Eax [size: 32 bit]
             Rax [size: 64 bit]
         b. Base
-            bl [size: 8 bit low, use: ] 
-            bh [size: 8 bit high, use: ]
-            bx [size: 16 bit, use: ]
+            bl [size: 8 bit low, use: Store Value when other is occupied] 
+            bh [size: 8 bit high, use: Store Value when other is occupied]
+            bx [size: 16 bit, use: Move]
             Ebx [size: 32 bit]
             Rbx [size: 64 bit]
         c. Counter
-            cl []
-            ch []
-            cx []
+            cl [size: 8 bit low, use: loop iteration]
+            ch [size: 8 bit high, use: loop iteration]
+            cx [size: 16 bit, use: loop iteration] ; mostly used
         d. Data
-            dl []
-            dh []
-            dx [] ah(2 for char,9 for string)
+            dl [size: 8 bit low, use: for output value much be in it]
+            dh [size: 8 bit low, use: for output value much be in it]
+            dx [size: 16 bit, use: for output value much be in it] 
 
     2. Segment 
         a. Code Segment
@@ -75,7 +75,7 @@ mov dx,'a'
 mov ah,2
 int 21h
 
-# Input and output char
+# Input and Output char
 mov ah,1
 int 21h
 mov dl,al
@@ -132,13 +132,12 @@ add reg,48
         mov ah,9
         int 21h
     # Defination
-
+        ; coming soon
 # Loop
-    Syntext:
-        ; counter Register
-        mov cx,number 
+    ## Syntext:
+        mov cx,number   ; counter Register
         loopName:
-            ; Code
+            ; Code here
         loop loopName
 
         # increment
@@ -217,5 +216,3 @@ mov ds,ax
 mov dx,offset msg1
 mov ah,9
 int 21h
-
-
