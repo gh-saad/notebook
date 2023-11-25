@@ -88,7 +88,9 @@ end Main
 
 ### Send Interput to CPU
 
-    int 21h
+```asm
+int 21h
+```
 
 ## How to Run
 
@@ -102,47 +104,60 @@ file_name.exe
 
 ## Print single char
 
-    mov dx,'a' ;initilizae 'a' to dx register
-    mov ah,2   ;Output char Intrupt
-    int 21h    ;Send Intrupt
+```asm
+mov dx,'a'   ;initilizae 'a' to dx register
+mov ah,2     ;Output char Intrupt
+int 21h      ;Send Intrupt
+```
 
 ## Input and Output char
 
-    mov ah,1  ;Take input
-    int 21h   ;Send Intrupt
-    mov dl,al ;Move value to Dl register so,ah can ouput
-    mov ah,2  ;Output char Intrupt
-    int 21h   ;Send Intrupt
+```asm
+mov ah,1    ;Take input
+int 21h     ;Send Intrupt
+mov dl,al   ;Move value to Dl register so,ah can ouput
+mov ah,2    ;Output char Intrupt
+int 21h     ;Send Intrupt
+```
 
 ## Add two numbers
 
-    mov al,4
-    mov dl,3
-    add dl,al
-    add dl,48
-    mov ah,2
-    int 21h
+```asm
+mov al,4
+mov dl,3
+add dl,al
+add dl,48
+mov ah,2
+int 21h
+```
 
 ## Sub two numbers
 
-    mov al,3
-    mov dl,4
-    sub dl,al
-    add dl,48
-    mov ah,2
-    int 21h
+```asm
+mov al,3
+mov dl,4
+sub dl,al
+add dl,48
+mov ah,2
+int 21h
+```
 
 ### Add this to convert hexcode to descimal
 
-    add reg,48
+```asm
+add reg,48
+```
+
 ### Enter Key Code
 
-    mov dx,10
-    mov ah,2
-    int 21h
-    mov dx,13
-    mov ah,2
-    int 21h
+```asm
+mov dx,10
+mov ah,2
+int 21h
+mov dx,13
+mov ah,2
+int 21h
+```
 
 ## Variables
 
@@ -152,7 +167,9 @@ file_name.exe
 
 #### Example
 
-    varName db "x"
+```asm
+varName db "x"
+```
 
 #### Size
 
@@ -170,8 +187,10 @@ file_name.exe
 
 ### Initilization
 
+```asm
     var1 db ?
     var2 db 'saad$'
+```
 
 ### Accessing var
 
