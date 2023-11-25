@@ -1,158 +1,228 @@
-# Start code:
+# Assembly Language
+
+## Registers
+
+### Types of Registers
+
+#### General Purpose (Input, Output and Move value from reg to reg)
+
+* ##### Accmulator
+
+  * al [size: 8 bit low, use: input]    1 byte [1,2,3,4,5,6,7,8]
+  * ah [size: 8 bit high, use: output]  1 byte [9,10,11,12,13,14,15,16]
+  * ah (2 for char, 9 for string)
+  * ax [size: 16 bit, use: move value]  2 byte [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+  * Eax [size: 32 bit]
+  * Rax [size: 64 bit]
+
+* ##### Data
+
+  * dl [size: 8 bit low, use: for output value much be in it]
+  * dh [size: 8 bit low, use: for output value much be in it]
+  * dx [size: 16 bit, use: for output value much be in it]
+
+* ##### Base
+
+  * bl [size: 8 bit low, use: Store Value when other is occupied]
+  * bh [size: 8 bit high, use: Store Value when other is occupied]
+  * bx [size: 16 bit, use: Move]
+  * Ebx [size: 32 bit]
+  * Rbx [size: 64 bit]
+
+* ##### Counter
+
+  * cl [size: 8 bit low, use: loop iteration]
+  * ch [size: 8 bit high, use: loop iteration]
+  * cx [size: 16 bit, use: loop iteration] ; mostly used
+
+* #### Segment
+
+  * Code Segment
+    * cs
+  * Data Segment
+    * ds
+  * Stack Segment
+    * ss
+  * Extra Segment
+    * ex
+  * Index Registers
+    * Source Index
+    * Distination Index
+  * Special Registor
+    * Intertion pointer
+    * .Stack Pointer
+
+* #### Flag Registor
+
+  * comming soon
+
+## How to Start coding
+
+Install and open dosbox and then type this to mount C Drive
+
     mount c c:/MP
     c:
 
-# New/open File:
+## Edit or Create File
+
     edit file_name.asam
 
-# Basic Structure:
-    dosseg (Format)
-    .model small (Use to take space i RAM) [small, medium, compate, large, huge, directive]
-    .stack 100h (Use when we need to use the occupied register we can push that value to the stack string revirce)
-    .data (Define variable after that)
+## Basic Structure
 
-    .code (after main coding start)
-    Main proc
-        ;coding here
-    mov ah,4ch
-    int 21h
-    Main endp
-    end Main
+```asm
+dosseg       ;Format
+.model small ;take space in RAM 
+             ;[small, medium, compate, large, huge, directive]
+.stack 100h  ;Use when we need to use the occupied 
+             ;register we can push that value to the stack
+.data        
+    ;Define all variables here
+.code 
+Main proc
+    ;coding here
+mov ah,4ch
+int 21h
+Main endp
+end Main
+ ```
 
-# Registers
-    ## Types of Registers
-    1 General Purpose (Input, Output and Move value from reg to reg)
-        a. Accmulator  
-            al [size: 8 bit low, use: input]    1 byte [1,2,3,4,5,6,7,8] 
-            ah [size: 8 bit high, use: output]  1 byte [9,10,11,12,13,14,15,16] ; ah(2 for char,9 for string)
-            ax [size: 16 bit, use: move value]  2 byte [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-            Eax [size: 32 bit]
-            Rax [size: 64 bit]
-        b. Base
-            bl [size: 8 bit low, use: Store Value when other is occupied] 
-            bh [size: 8 bit high, use: Store Value when other is occupied]
-            bx [size: 16 bit, use: Move]
-            Ebx [size: 32 bit]
-            Rbx [size: 64 bit]
-        c. Counter
-            cl [size: 8 bit low, use: loop iteration]
-            ch [size: 8 bit high, use: loop iteration]
-            cx [size: 16 bit, use: loop iteration] ; mostly used
-        d. Data
-            dl [size: 8 bit low, use: for output value much be in it]
-            dh [size: 8 bit low, use: for output value much be in it]
-            dx [size: 16 bit, use: for output value much be in it] 
+### Send Interput to CPU
 
-    2. Segment 
-        a. Code Segment
-            cs
-        b. Data Segment
-            ds
-        c. Stack Segment 
-            ss
-        d. Extra Segment
-            ex
-    3. Index Registers
-        a. Source Index
-        b. Distination Index
-    4. Special Registor
-        a.Intertion pointer
-        b.Stack Pointer
-    5. Flag Registor
-    6. Base Registor
-
-#Send Interput to CPU   
     int 21h
 
-# Run
-save and exit file
+## How to Run
+
+Save and Exit file then write these cmd one by one
+
+```bash
 masm file_name.asm;
 link file_name.obj;
 file_name.exe
+```
 
-# Print single char
-mov dx,'a'
-mov ah,2
-int 21h
+## Print single char
 
-# Input and Output char
-mov ah,1
-int 21h
-mov dl,al
-mov ah,2
-int 21h
+    mov dx,'a' ;initilizae 'a' to dx register
+    mov ah,2   ;Output char Intrupt
+    int 21h    ;Send Intrupt
 
-# add two number
-mov al,4
-mov dl,3
-add dl,al
-add dl,48
-mov ah,2
-int 21h
+## Input and Output char
 
-# Sub 
-mov al,3
-mov dl,4
-sub dl,al
-add dl,48
-mov ah,2
-int 21h
+    mov ah,1  ;Take input
+    int 21h   ;Send Intrupt
+    mov dl,al ;Move value to Dl register so,ah can ouput
+    mov ah,2  ;Output char Intrupt
+    int 21h   ;Send Intrupt
 
-# when number add
-add reg,48
+## Add two numbers
 
-# Variables 
+    mov al,4
+    mov dl,3
+    add dl,al
+    add dl,48
+    mov ah,2
+    int 21h
+
+## Sub two numbers
+
+    mov al,3
+    mov dl,4
+    sub dl,al
+    add dl,48
+    mov ah,2
+    int 21h
+
+### Add this to convert hexcode to descimal
+
+    add reg,48
+### Enter Key Code
+
+    mov dx,10
+    mov ah,2
+    int 21h
+    mov dx,13
+    mov ah,2
+    int 21h
+
+## Variables
+
+### Syntax
+
     varName varSize value
-    e.g:
-        varName db "x"
-    size: 
-        db 8 bits
-        dw 16 bits
-        dd 32 bits
-        dq 64 bits
-        dt 80 bits
-    value:
-        int: must be in Ascii code
-        char: '0'
-        str: 'stringValue$'
 
-    # Initilization
-        var1 db ?
-        var2 db 'saad$'
-    
-    # Accessing var
-        mov ax,@data
-        mov ds,ax
-    # Print char
-        mov dx,var1
+#### Example
+
+    varName db "x"
+
+#### Size
+
+* db 8 bits
+* dw 16 bits
+* dd 32 bits
+* dq 64 bits
+* dt 80 bits
+
+#### Values
+
+* int: must be in Ascii code
+* char: '0'
+* str: 'stringValue$' must end on $
+
+### Initilization
+
+    var1 db ?
+    var2 db 'saad$'
+
+### Accessing var
+
+Accessing variables in .code body these two lines required
+
+    mov ax,@data
+    mov ds,ax
+
+### Print char
+
+    ; for char
+    mov dx,var1
+    mov ah,2
+    int 21h
+    ; for string
+    mov dx,offset var2  ;lea dx,var2
+    mov ah,9
+    int 21h
+
+## Defination
+
+    ; coming soon
+
+## Loop
+
+### Syntext
+
+    mov cx,{number}   ; counter Register
+    loopName:
+        ; Code here
+    loop loopName
+
+### Increment
+
+    add dx,1 
+    ; or
+    lnc dx
+
+### Example
+
+    mov cx,10      ; counter register for loop counter
+    mov bx,48      ; 48 ASCII Code for 0
+    L1:
+        mov dx,bx
         mov ah,2
         int 21h
-    # Print string
-        mov dx,offset var2 | lea dx,var2
-        mov ah,9
-        int 21h
-    # Defination
-        ; coming soon
-# Loop
-    ## Syntext:
-        mov cx,number   ; counter Register
-        loopName:
-            ; Code here
-        loop loopName
+        add bx,1    ; Increment
+    loop L1
 
-        # increment
-            add dx,1 | lnc dx
-    # code
-        mov cx,10
-        mov bx,48
-        L1:
-            mov dx,bx
-            mov ah,2
-            int 21h
-            add bx,1
-        loop L1
+## Jump
 
-# Jump
     Jmp1:
         ; Code
     cmp register1,register1 
@@ -166,7 +236,8 @@ add reg,48
 
     ;other coding
 
-#stack
+## Stack
+
     mov al,2
     push ax [16 bit]
     pop ax [16 bit]
@@ -174,7 +245,8 @@ add reg,48
     mov ah,2
     int 21h
 
-#nested loop
+## nested loop
+
     mov cx,5 ; L1
     mov bx,5 ; L2
     l1:
@@ -187,32 +259,16 @@ add reg,48
         pop cx
     Loop L1
 
-#procedure
+## Procedure
+
     Name proc
         ; Code
         ret
     Name endp
 
-#macro 
+## Macro
+
     Name macro param1
         ; Code
-    endm 
+    endm
 
-# Enter Key Code:
-    mov dx,10
-    mov ah,2
-    int 21h
-    mov dx,13
-    mov ah,2
-    int 21h
-
-.data
-msg1 db "gg$"
-
-.code
-main proc
-mov ax,@data
-mov ds,ax
-mov dx,offset msg1
-mov ah,9
-int 21h
