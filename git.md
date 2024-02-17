@@ -7,6 +7,37 @@
   cPanel > Terminal by entering the following command
 
 ```bash
+ssh-keygen -t rsa -f ~/.ssh/repo-name -b 4096 -C "<cpanel_username>@<hostname>"
+
+touch ~/.ssh/config
+```
+
+Write in the config
+
+```bash
+...
+Host github.com-<repo-name>
+  Hostname github.com
+  IdentityFile=/home/<cpane_username>/.ssh/hotwheels
+```
+
+Press Esc and :wq enter to save and exit.
+
+```bash
+chmod 0600 ~/.ssh/config
+
+chown <cpanel_username>@<hostname> ~/.ssh/config
+
+git clone git@github.com-<repo-name>:<git-username>/<repo-name>.git
+```
+
+Verify connection with github
+
+```bash
+ssh -i ~/.ssh/<repo-name> -T git@github.com
+```
+
+```bash
 cd ~/.ssh/
 ssh-keygen -t rsa -b 4096 -C "username@example"
 ssh-keygen -t ecdsa -b 256 -m PEM
@@ -42,3 +73,13 @@ and then
 ```bash
 git clone git@bitbucket.org:username/project.git
 ```
+
+Authurized key from Cpanel
+
+Initial commit: set up Node.js project
+feat(user-auth): implement user authentication
+fix(database): resolve connection issue with MongoDB
+docs(readme): update installation instructions
+refactor(api): improve error handling in API module
+test(unit): add test cases for user service
+chore(dependencies): update npm packages
