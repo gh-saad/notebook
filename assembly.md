@@ -8,9 +8,8 @@
 
 * ##### Accmulator
 
-  * al [size: 8 bit low, use: input]    1 byte [1,2,3,4,5,6,7,8]
-  * ah [size: 8 bit high, use: output]  1 byte [9,10,11,12,13,14,15,16]
-  * ah (2 for char, 9 for string)
+  * ah [size: 8 bit high, use: output- 2 for char, 9 for string]  1 byte [1,2,3,4,5,6,7,8]
+  * al [size: 8 bit low, use: input]    1 byte [9,10,11,12,13,14,15,16]
   * ax [size: 16 bit, use: move value]  2 byte [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
   * Eax [size: 32 bit]
   * Rax [size: 64 bit]
@@ -20,6 +19,8 @@
   * dl [size: 8 bit low, use: for output value much be in it]
   * dh [size: 8 bit low, use: for output value much be in it]
   * dx [size: 16 bit, use: for output value much be in it]
+  * Edx [size: 32 bit]
+  * Rdx [size: 64 bit]
 
 * ##### Base
 
@@ -38,23 +39,27 @@
 * #### Segment
 
   * Code Segment
-    * cs
+    * cs [hold address of code segment which are in RAM]
   * Data Segment
-    * ds
+    * ds [hold address of data segment which are in RAM]
   * Stack Segment
-    * ss
+    * ss [hold top node of the stack]
   * Extra Segment
-    * ex
+    * ex [hold extra space address of code if cs is full]
   * Index Registers
     * Source Index
+    * si [tell the CPU what is the Source Value]
     * Distination Index
+    * di [tell the CPU what is the Destination Value]
   * Special Registor
     * Intertion pointer
-    * .Stack Pointer
-
-* #### Flag Registor
-
-  * comming soon
+      * ip [hold next intruction to be excute]
+    * Stack Pointer
+      * sp [Point current of top of stack]
+  * Flag Registor
+    [hold the status of program]
+  * Base Pointer Register
+    * bp [hold the next address after top of stack]
 
 ## How to Start coding
 
@@ -214,6 +219,9 @@ Accessing variables in .code body these two lines required
 
     ; coming soon
 
+## Array
+
+
 ## Loop
 
 ### Syntext
@@ -291,3 +299,29 @@ Accessing variables in .code body these two lines required
         ; Code
     endm
 
+## Graphics
+
+  ```asm
+  drawShap macro sr,sc,c,h,tl,w
+  mov ah,6
+
+  mov ch,sr ;position
+  mov cl,sc ;position
+
+  mov bh,c ;color
+
+  mov al,h ;height 
+
+  mov dh,tl   
+  mov dl,w ;width
+  endm
+ ```
+
+ ## div
+
+ 8bit AX/BL = AL-Q AH-R
+ 16bit DX AX/BX = AX-Q DX-R
+ ## Mul
+
+ 8Bit AL * BL = AX[AH AL]
+ 16bit AX*BX = DX AX
