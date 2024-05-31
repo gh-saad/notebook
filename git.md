@@ -7,8 +7,13 @@
   cPanel > Terminal by entering the following command
 
 ```bash
-ssh-keygen -t rsa -f ~/.ssh/repo-name -b 4096 -C "<cpanel_username>@<hostname>"
+ssh-keygen -t rsa -f ~/.ssh/<repo-name> -b 4096 -C "<cpanel_username>@<hostname>"
+ssh-keygen -t ecdsa -f ~/.ssh/<repo-name> -b 256
+```
 
+Run only first time
+
+```bash
 touch ~/.ssh/config
 ```
 
@@ -18,7 +23,7 @@ Write in the config
 ...
 Host github.com-<repo-name>
   Hostname github.com
-  IdentityFile=/home/<cpane_username>/.ssh/hotwheels
+  IdentityFile=/home/<cpanel_username>/.ssh/<repo-name>
 ```
 
 Press Esc and :wq enter to save and exit.
@@ -27,14 +32,18 @@ Press Esc and :wq enter to save and exit.
 chmod 0600 ~/.ssh/config
 
 chown <cpanel_username>@<hostname> ~/.ssh/config
-
-git clone git@github.com-<repo-name>:<git-username>/<repo-name>.git
 ```
 
 Verify connection with github
 
 ```bash
 ssh -i ~/.ssh/<repo-name> -T git@github.com
+```
+
+Run to clone the repository  
+
+```bash
+git clone git@github.com-<repo-name>:<git-username>/<repo-name>.git
 ```
 
 ```bash
