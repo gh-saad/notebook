@@ -1,0 +1,39 @@
+Requirments:
+	Python
+	Pip
+	venv
+
+Install Django:
+	pip install django
+
+Create project:
+	django-admin startproject django	
+
+Run Server:
+	py manage.py runserver
+	py manage.py migrate
+	py manage.py createsuperuser
+
+Routes:
+	{project}/{project}/urls.py
+
+Models:
+	{project}/{app}/models.py
+
+Migrations
+	py manage.py makemigrations {app}
+	py manage.py migrate 
+
+CRUD operations:
+	Read:
+		from .models import Car
+		cars = Car.objects.all()
+
+	Admin Registration:
+		from .models import Car
+		admin.site.register(Car)
+
+
+Folder architecture:
+
+Request cycle:
