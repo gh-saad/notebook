@@ -1,4 +1,18 @@
-# Git
+# What is Git
+  
+  Version control system
+
+# key terms
+  
+  Repository
+  commit
+  push
+  pull
+  contributor
+  clone
+  stash
+  barach
+  
 
 ## Clone a private repository to cPanel
 

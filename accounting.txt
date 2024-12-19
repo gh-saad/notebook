@@ -1,0 +1,24 @@
+Debit:
+    Assets
+    Dividends
+    Expenses  
+Credit:
+    Liabilities
+    Equity
+    Revenue
+
+Accounting Equation/ Balance sheet Equation:
+    Assets = Liabilities + Equity
+
+T Accounting:
+    ____________
+    Debit|Credit
+         |
+
+Balance sheet:
+    Assets       Liabilities
+    _______________________
+    What we Own|What we owe
+               |
+
+               

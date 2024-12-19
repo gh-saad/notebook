@@ -43,3 +43,8 @@ on cmd
     pipreqs .
     ```
 
+#Clean Text
+
+def clean_text(input_string):
+  output_string = " ".join(input_string.split())
+  return output_string

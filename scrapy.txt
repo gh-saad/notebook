@@ -48,3 +48,6 @@ pip install scrapy-playwright
 playwright install
 
 [400,401,403,404,500,503,301,302,307,304,429]
+
+LOG_ENABLED=True
+LOG_LEVEL = 'ERROR'

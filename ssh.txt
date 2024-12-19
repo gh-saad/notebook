@@ -25,3 +25,18 @@ sudo sysctl vm.swappiness=10
 sudo nano /etc/sysctl.conf
 vm.swappiness=10
 cat /proc/sys/vm/vfs_cache_pressure
+
+
+scp /home/empired2/public_html/EDWebsite/.git.zip root@109.123.240.3:/home/empiredevelopmen/public_html/file.zip
+
+
+
+curl https://get.acme.sh | sh
+ls .acme.sh/
+pwd
+.acme.sh/acme.sh --register-account -m saad@xeramarketing.com
+.acme.sh/acme.sh --issue -d xeramarketing.com -w /home/thedlqwf/public_html/xeramarketing
+
+cd .acme.sh/
+cd .acme.sh/xeramarketing.com_ecc
+cat xeramarketing.com.cer

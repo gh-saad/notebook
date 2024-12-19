@@ -1,0 +1,8 @@
+# modeling
+.Reffrance
+view port
+camra, box, lamp
+Hot key:
+G x,y,z axis
+N item tab
+mash much be in square shap

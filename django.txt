@@ -19,6 +19,13 @@ Routes:
 
 Models:
 	{project}/{app}/models.py
+	Feilds:
+
+	Relationships:
+		One to One:
+		One to Many
+		Many to Many {Need improvemnet}
+		Self
 
 Migrations
 	py manage.py makemigrations {app}
@@ -33,7 +40,19 @@ CRUD operations:
 		from .models import Car
 		admin.site.register(Car)
 
-
+Auth System:
+	{Monday}
 Folder architecture:
+	
+	[Main Project]
+		[Main Project]
+
+		[[APP]]
+		[[APP]]
+		manage.py
+		db.sqlite3
 
 Request cycle:
+	{}
+
+Architecture:

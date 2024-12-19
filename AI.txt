@@ -1,0 +1,5 @@
+What is AI?
+What is ML?
+What is Data?
+What is Deep learning?
+What is Data Scrience?
