@@ -4,11 +4,11 @@ Debit:
     Expenses  
 Credit:
     Liabilities
-    Equity
+    Capital
     Revenue
 
 Accounting Equation/ Balance sheet Equation:
-    Assets = Liabilities + Equity
+    Assets = Liabilities + Capital
 
 T Accounting:
     ____________
