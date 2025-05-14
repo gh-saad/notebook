@@ -8,14 +8,17 @@ Install Django:
 
 Create project:
 	django-admin startproject django	
-
+Create app:
+	py manage.py startapp appname
+View(Controller):
+	
 Run Server:
 	py manage.py runserver
 	py manage.py migrate
 	py manage.py createsuperuser
 
-Routes:
-	{project}/{project}/urls.py
+urls.py (Routes):
+
 
 Models:
 	{project}/{app}/models.py
